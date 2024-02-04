@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Banner from './components/Banner';
+import About from './components/About';
+import MyToolkit from './components/MyToolkit';
+import Port from './components/Port';
+import Portifolio from './components/Portifolio';
+import Third from './components/Third';
+import Footer from './components/Footer';
+import DiscoverTay from './pages/DiscoverTay';
+import MyPortfolio from './pages/MyPortfolio';
+import ContactTay from './pages/ContactTay';
+
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+   
+    <Router>
+       <Header />
+       <Banner />
+       <About/>
+       <MyToolkit/>
+       <Port/>
+       <Portifolio/>
+       <Third/>
+       <Footer/>
+      <Routes>
+        <Route element={<DiscoverTay/>}exact path='/DiscoverTay' />
+        <Route element={<MyPortfolio/>}exact path='/MyPortfolio' />
+        <Route element={<ContactTay/>}exact path='/ContactTay' />
+       
+      </Routes>
+    </Router>
+    </>
   );
 }
 
