@@ -1,23 +1,7 @@
 import React from 'react'
-import Roll from 'react-reveal/Roll';
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
+import { Slide } from "react-awesome-reveal";
 
-const slideIn = keyframes`
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-`;
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
 
 
 const Wrapper = styled.div`
@@ -56,7 +40,7 @@ const Wrapper = styled.div`
     }
     h1{
       font-family:${(props) => props.theme.fam.bold };
-      animation: ${fadeIn} 4s forwards;
+
       font-size:40px;
       @media(min-width:768px){
     margin-top:25px;
@@ -129,7 +113,7 @@ const Wrapper = styled.div`
             margin-top:15px;
             left:30px;
             width:6%;
-            animation: ${slideIn} 3s ease-in-out;
+            
             @media(min-width:768px){
               margin-left:155px;
               width:4%;
@@ -153,7 +137,7 @@ const Wrapper = styled.div`
           }
       .xoo{
         margin-bottom:20px;
-        animation: ${slideIn} 4s ;
+      
         @media(min-width:768px){
       margin-left:50px;
       margin-top:170px;
@@ -170,7 +154,7 @@ const Wrapper = styled.div`
       .xuu{
         margin-bottom:20px;
         line-height:30px;
-        animation: ${fadeIn} 3s ease-in-out;
+    
         @media(min-width:768px){
       margin-left:50px;
     }
@@ -188,7 +172,7 @@ const Wrapper = styled.div`
       width:86%;
       height:70%;
       padding:20px;
-      animation: ${fadeIn} 3s ease-in-out;
+    
       @media(min-width:768px){
       width:55%;
       height:30%;
@@ -229,9 +213,9 @@ const Wrapper = styled.div`
 function Port() {
   return (
     <Wrapper>
-       <Roll ln>
+       
       <div className='whole'>
-     
+      <Slide direction="left">
         <div className='port'>
           <p>Check out some of my work</p>
           <h1>My Portfolio</h1>
@@ -255,9 +239,9 @@ function Port() {
          </div>
 
         </div>
-       
+        </Slide>
       </div>
-      </Roll>
+  
     </Wrapper>
   )
 }

@@ -1,30 +1,13 @@
 import React from 'react'
-import Roll from 'react-reveal/Roll';
-import styled, { keyframes } from "styled-components";
-
-const slideIn = keyframes`
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-`;
-
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
+import styled from "styled-components";
+import { Slide } from "react-awesome-reveal";
 
 
-const Wrapper = styled.div`
+
+
+const Container = styled.div`
 .bawo{
+  position:relative;
     background-color:#000;
     height:1000px;
     @media(min-width:768px){
@@ -68,7 +51,7 @@ const Wrapper = styled.div`
     .duze{
       h1{
         font-family:${(props) => props.theme.fam.bold };
-        animation: ${slideIn} 3s ;
+      
         color:white;
         margin-top:20px;
         margin-left:15px;
@@ -91,8 +74,8 @@ const Wrapper = styled.div`
             color:white;
             padding:5% ;
             line-height:20px;
-            opacity: 0;
-        animation: ${fadeIn} 4s forwards;
+            
+        
         @media(min-width:1024px){
       margin-left:115px;
       line-height:30px;
@@ -116,8 +99,8 @@ const Wrapper = styled.div`
             color:white;
             padding:5% ;
             line-height:20px;
-            opacity: 0;
-        animation: ${fadeIn} 4s forwards;
+          
+    
         @media(min-width:1024px){
       margin-left:115px;
       line-height:30px;
@@ -193,7 +176,7 @@ const Wrapper = styled.div`
         position:absolute;
         right:51px;
         margin-top:15px;
-        animation: ${slideIn} 3s ease-in-out;
+      
    
         @media(min-width:375px){
        right:102px;
@@ -256,11 +239,12 @@ const Wrapper = styled.div`
 }
 `
 
-function About() {
+const ProfComponent = () => {
   return (
-    <Wrapper>
-       <Roll ln>
+    <Container id="about">
+      <Slide direction="left">
         <div className='bawo'>
+        
             <div className='mveli'>
                 <img src='./images/2022_12_06_15_43_IMG_2437 1-1.png' alt=''></img>
             </div>
@@ -283,10 +267,11 @@ function About() {
                      <img src='./images/Group 30.png'width={30}className='zoo' alt=''></img>
                      <img src='./images/Vector .png'width={10}className='zee' alt=''></img>
             </div>
+            
         </div>
-        </Roll>
-    </Wrapper>
+        </Slide>
+    </Container>
   )
 }
 
-export default About
+export default ProfComponent

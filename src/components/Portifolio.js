@@ -1,28 +1,13 @@
 import React from 'react'
-import styled, { keyframes } from "styled-components";
-import Roll from 'react-reveal/Roll';
-const slideIn = keyframes`
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-`;
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
+import styled from "styled-components";
+import { Slide } from "react-awesome-reveal";
 
 
 const Wrapper = styled .div`
 .can{
     background-color:#000;
     height:900px;
+    position:relative;
     @media(min-width:375px){
       height:1040px;
       
@@ -75,7 +60,7 @@ const Wrapper = styled .div`
         p{
             margin-top:10px;
             line-height:25px;
-            animation: ${fadeIn} 4s forwards;
+          
             @media(min-width:768px){
               position:absolute;
               margin-top:155px;
@@ -124,7 +109,7 @@ const Wrapper = styled .div`
             margin-top:35px;
             left:30px;
             width:6%;
-            animation: ${slideIn} 3s ease-in-out;
+          
             @media(min-width:768px){
               width:3%;
               position:absolute;
@@ -150,7 +135,7 @@ const Wrapper = styled .div`
           }
         .uuu{
             width:70%;
-            animation: ${slideIn} 4s ;
+        
             @media(min-width:768px){
               width:50%;
              
@@ -195,7 +180,7 @@ const Wrapper = styled .div`
             margin-top:10px;
             line-height:25px;
             color:white;
-            animation: ${slideIn} 4s ;
+            
             @media(min-width:768px){
               position:absolute;
               margin-top:155px;
@@ -244,7 +229,7 @@ const Wrapper = styled .div`
             margin-top:35px;
             left:30px;
             width:6%;
-            animation: ${slideIn} 3s ease-in-out;
+            
             @media(min-width:768px){
               width:3%;
               position:absolute;
@@ -269,7 +254,7 @@ const Wrapper = styled .div`
           }
         .zzz{
             width:70%;
-            animation: ${fadeIn} 4s forwards;
+          
             @media(min-width:768px){
               width:50%;
              
@@ -306,7 +291,7 @@ const Wrapper = styled .div`
           position:absolute;
           margin-left:1050px;
           margin-top:30px;
-          top:-60px;
+          top:810px;
         }
       }
       .aaa{
@@ -314,7 +299,7 @@ const Wrapper = styled .div`
         left:188px;
         width:7%;
         margin-top:42px;
-        animation: ${slideIn} 3s ease-in-out;
+      
         @media(min-width:768px){
           width:3%;
           margin-left:496px;
@@ -331,7 +316,7 @@ const Wrapper = styled .div`
           width:1%;
           margin-left:867px;
           margin-top:35px;
-          top:-55px;
+          top:815px;
         }
        
       }
@@ -363,7 +348,7 @@ const Wrapper = styled .div`
           position:absolute;
           margin-top:15px;
           margin-left:25px;
-          animation: ${fadeIn} 4s forwards;
+        
           @media(min-width:768px){
             margin-left:530px;
             position:absolute;
@@ -377,7 +362,7 @@ const Wrapper = styled .div`
           @media(min-width:1200px){
             margin-left:900px;
             position:absolute;
-            top:-60px;
+            top:810px;
            
           }
           z-index:1;
@@ -412,7 +397,7 @@ function Portifolio() {
   return (
     <Wrapper>
         <div className='can'>
-        <Roll ln>
+        <Slide direction="right">
             <div className='cane'>
                 <img src='./images/Rectangle 6.png'className='uuu' alt=''></img>
                 <h6>Package Design</h6>
@@ -443,7 +428,7 @@ function Portifolio() {
                <img src='./images/Vector 1.png'width={10} className='aaa' alt=''></img>
 
             </div>
-            </Roll>
+            </Slide>
         </div>
     </Wrapper>
   )

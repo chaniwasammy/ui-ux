@@ -1,22 +1,6 @@
 import React from 'react'
-import Roll from 'react-reveal/Roll';
-import styled, { keyframes } from "styled-components";
-const slideIn = keyframes`
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-`;
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
+import styled from "styled-components";
+import { Slide } from "react-awesome-reveal";
 const Wrapper = styled.div`
 background-color:#000;
 
@@ -33,7 +17,7 @@ background-color:#000;
     color:white;
     margin-top:5px;
     position:absolute;
-    animation: ${fadeIn} 2s ease-in-out;
+
     @media(min-width:768px){
       margin-top:90px;
       font-size:25px;
@@ -86,7 +70,7 @@ background-color:#000;
       position:absolute;
       margin-top:7px;
       left:115px;
-      animation: ${slideIn} 3s ease-in-out;
+  
       @media(min-width:768px){
       margin-left:158px;
       margin-top:98px;
@@ -109,7 +93,7 @@ background-color:#000;
     }
   h1{
     font-family:${(props) => props.theme.fam.bold };
-    animation: ${slideIn} 4s ;
+  
     color:white;
     margin-top:20px;
     line-height:40px;
@@ -140,7 +124,7 @@ background-color:#000;
      line-height:30px;
       font-size:15px;
       color:white;
-      animation: ${slideIn} 4s ;
+    
       @media(min-width:768px){
        position:absolute;
       margin-left:100px;
@@ -203,7 +187,7 @@ width: 40%;
 .woo{
   position:absolute;
   right:15px;
-  animation: ${fadeIn} 2s ease-in-out;
+
 
     @media(min-width:375px){
        right:7px;
@@ -232,7 +216,7 @@ width: 40%;
 function Banner() {
   return (
     <Wrapper>
-      <Roll ln>
+      <Slide direction="left">
         <div className='ngaa'>
             <div className='text'>
                 <p>Hi there! I'm Tay Dylan Magwaro</p>
@@ -246,7 +230,7 @@ function Banner() {
               <img src='./images/Path 118 1.png'className='woo' alt=''></img>
             </div>
         </div>
-        </Roll>
+        </Slide>
     </Wrapper>
   )
 }

@@ -3,9 +3,8 @@ import React from 'react'
  import { GoMail } from "react-icons/go";
  import { MdLocalPhone } from "react-icons/md";
  import { AiFillInstagram } from "react-icons/ai";
- import Roll from 'react-reveal/Roll';
 import styled from 'styled-components'
-
+import { Slide } from "react-awesome-reveal";
  const Wrapper= styled.footer`
  background: #000;
  margin-top: 10%;
@@ -321,7 +320,7 @@ text-align: left;
 function Footer() {
   return (
     <Wrapper>
-      <Roll ln>
+      <Slide direction="left">
      <div className='footer'>
      <img src="./images/Path 118 1.png" alt=""/>  
          <div className='text-div'>
@@ -353,7 +352,7 @@ function Footer() {
          </div>
       </div>
      </div> 
-     </Roll>
+     </Slide>
     </Wrapper>
   )
 }

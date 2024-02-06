@@ -1,34 +1,6 @@
 import React from 'react'
-
-import styled, { keyframes } from "styled-components";
-import Roll from 'react-reveal/Roll';
-const slideIn = keyframes`
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-`;
-
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-`;
-
+import styled from "styled-components";
+import { Slide } from "react-awesome-reveal";
 
 const Wrapper = styled.div`
 .tool{
@@ -46,7 +18,7 @@ const Wrapper = styled.div`
     }
     h1{
       font-family:${(props) => props.theme.fam.bold };
-      animation: ${slideIn} 4s ;
+    
       position:absolute;
       top:20%;
       margin-left:50px;
@@ -74,7 +46,7 @@ const Wrapper = styled.div`
       position:absolute;
       right:260px;
       margin-top:130px;
-      animation: ${slideIn} 3s ease-in-out;
+      
    
       @media(min-width:768px){
       width:12%;
@@ -97,7 +69,7 @@ const Wrapper = styled.div`
       position:absolute;
       right:180px;
       margin-top:130px;
-      animation: ${fadeIn} 2s ease-in-out;
+      
    
       @media(min-width:768px){
       width:15%;
@@ -120,7 +92,7 @@ const Wrapper = styled.div`
       position:absolute;
       right:100px;
       margin-top:130px;
-      animation: ${fadeIn} 2s ease-in-out;
+    
 
       @media(min-width:768px){
       width:15%;
@@ -142,7 +114,7 @@ const Wrapper = styled.div`
       position:absolute;
       right:20px;
       margin-top:130px;
-      animation: ${slideIn} 3s ease-in-out;
+    
    
       @media(min-width:768px){
       width:15%;
@@ -169,8 +141,9 @@ const Wrapper = styled.div`
 function MyToolkit() {
   return (
     <Wrapper>
-       <Roll ln>
+       
       <div className='tool'>
+      <Slide direction="right">
         <div className='kit'>
           <img src='./images/Rectangle 8.png' className='kitt' alt='' ></img>
       
@@ -181,9 +154,9 @@ function MyToolkit() {
           <img src='./images/logos_adobe-photoshop.png' className='four' alt=''></img>
         
         </div>
-      
+        </Slide>
       </div>
-      </Roll>
+    
     </Wrapper>
   )
 }

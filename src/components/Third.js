@@ -1,27 +1,6 @@
 import React from 'react'
-import styled, { keyframes } from "styled-components";
-import Roll from 'react-reveal/Roll';
-const slideIn = keyframes`
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-`;
-
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
-
-
+import styled from "styled-components";
+import { Slide } from "react-awesome-reveal";
 const Wrapper = styled.div`
 background:url("./images/Rectangle 8.png");
 color: #fff;
@@ -146,7 +125,7 @@ gap: 9%;
 h5{
     font-size: 22px;
     font-weight: 400;
-    animation: ${slideIn} 4s ;
+    
     @media(min-width:1200px){
         font-size: 35px;
         font-weight: 200;
@@ -172,7 +151,6 @@ h5{
 h6{
 font-size: 16px;
 margin-bottom: 10px;
-animation: ${slideIn} 4s ;
 @media(min-width:1200px){
     font-size: 16px;
 margin-bottom: 10px;   
@@ -184,7 +162,7 @@ margin-bottom: 10px;
 }
 }
 p{
-    animation: ${fadeIn} 4s forwards;
+    
     @media(min-width:768px){
         line-height: 21px;
     } 
@@ -220,9 +198,9 @@ img{
 function Third() {
     return (
         <Wrapper>
-            <Roll ln>
+            
             <div className='outer'>
-                
+            <Slide direction="left">
                 <div className='images'>
                     <img src='./images/Group 10 2.png' className='below' alt='' />
                     <img src='./images/Ellipse 2.png' className='up' alt='' />
@@ -239,9 +217,11 @@ function Third() {
                     </p>
 
                 </div>
+                </Slide>
             </div>
+
             <div className='outer'>
-               
+                <Slide direction="left">
                 <div className='images'>
                     <img src='./images/Group 10 2.png' className='below' alt='' />
                     <img src='./images/Ellipse .png' className='up' alt='' />
@@ -257,8 +237,9 @@ function Third() {
                     </p>
 
                 </div>
+                </Slide>
             </div>
-            </Roll>
+            
         </Wrapper>
     )
 }
